@@ -1,0 +1,28 @@
+.content {
+	
+  height: auto;
+  }
+  
+	.sidenav{
+		border-style: solid;
+    border-width: 1px;
+	border-color:#337ab7;
+	margin-left:50px;
+	height:100%;
+	background-color:#f1f1f1;
+  }
+  
+  .mainContainer{
+	  border-style: solid;
+    border-width: 1px;;
+	border-color:#337ab7;
+  background-color:#f1f1f1;
+  height:Auto;
+  width:850px;
+  margin-left:50px;
+  }
+  
+   .login{
+	  
+	  margin-top:20%;
+  */

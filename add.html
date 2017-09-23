@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/blog.css"/>
+</head>
+<body>
+
+<!--menu bar  starts(header)-->
+	<div id="header"> 
+	</div>
+  
+  
+ 
+<!--menu bar  ends (header)-->
+
+<!-- vertical menu bar  starts-->
+<div class="container-fluid">
+<div class="row content ">
+    
+	<div class="col-sm-3 sidenav" id="vbar">
+      
+    </div>
+
+	
+	<div class="col-sm-9 mainContainer"  >
+	
+		<div ng-app="Register" ng-controller="RegisterCtrl"> 
+		<h4>Register </h4> 
+	
+		<button onclick="window.location.reload()" class="btn btn-primary">Refresh</button>
+			
+			<div  class="col-lg-10">
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="control-label col-sm-2" >Name:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="name" >
+					</div>
+				</div>
+				
+				<div class="form-group">
+						<label class="control-label col-sm-2" >Mobile Number:</label>
+						<div class="col-sm-10">          
+							<input type="text" class="form-control" ng-model="mobile" >
+						</div>
+				</div>
+				
+				<div class="form-group">
+						<label class="control-label col-sm-2" >Email ID:</label>
+						<div class="col-sm-10">          
+							<input type="text" class="form-control"  ng-model="email">
+						</div>
+				</div>
+				
+				<div class="form-group">        
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary" ng-click="register()">Submit</button>
+						<button type="reset" class="btn btn-primary">Reset</button>
+					</div>
+				</div>
+			</form>
+			
+			<br/>
+			<br/>
+			<div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+	  <br/>
+	  <br/>
+	  
+		</div>
+		
+			<table class="table table-striped" >
+				<thead >
+						<tr>
+							<th>NAME</th>
+							<th>MOBILE NUMBER</th>
+							<th>EMAIL ID</th>
+   						</tr>
+				</thead>
+				<tbody>
+						<tr ng-repeat="x in reg">
+							<td> {{x.name}}</td>
+							<td>{{x.mobile}}</td>
+							<td>{{x.email}}</td>
+							<td> 
+								<button type="button" class="btn btn-default btn-sm" ng-click="removeItem($index)">
+									<span class="glyphicon glyphicon-remove"></span> Remove 
+								</button>
+							</td>
+						</tr>
+      
+				</tbody>
+		</table>
+			
+		</div>
+	</div>
+</div>
+
+
+	
+
+
+
+
+</div>
+<!-- vertical menu bar  ends-->
+
+</body>
+<script>
+$(function(){
+$('#header').load("header.html");
+$('#vbar').load("vbar.html");
+});
+</script>
+<script src="js/blogapp.js"> </script>
+<script src="js/blogctrl.js"> </script>
+
+
+  
+</html>
